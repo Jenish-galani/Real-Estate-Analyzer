@@ -29,7 +29,7 @@ public class HousesServ {
     public long minSalePrice(){
         return houseRepo.minSalePrice();
     }
-    public List<Object[]> averageSalePriceByLocation(){
+    public List<Map<String, Double>> averageSalePriceByLocation(){
         return houseRepo.averageSalePriceByLocation();
     }
 }
