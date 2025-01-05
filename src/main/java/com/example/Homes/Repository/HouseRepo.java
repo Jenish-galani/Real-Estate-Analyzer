@@ -20,6 +20,6 @@ public interface HouseRepo extends JpaRepository<Houses, Long> {
     @Query(value = "SELECT min(sale_price) from Houses", nativeQuery = true)
     long minSalePrice();
 
-    @Query(value = "select  location, avg(sale_price) from Houses group by location", nativeQuery = true)
-    List<Object[]> averageSalePriceByLocation();
+    @Query(value = "select  location, avg(sale_price) as Average_sale_price from Houses group by location", nativeQuery = true)
+    List<Map<String, Double>> averageSalePriceByLocation();
 }
