@@ -43,7 +43,7 @@ public class HousesController {
         return houseServ.minSalePrice();
     }
     @GetMapping("/get-average-location")
-    public List<Object[]> averageSalePriceByLocation(){
+    public List<Map<String,Double>> averageSalePriceByLocation(){
         System.out.print("Average sale price of the house per location");
         return houseServ.averageSalePriceByLocation();
     }
